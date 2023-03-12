@@ -16,4 +16,4 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 config:
   dept:
-    message: "Hellow World"
+    message: "Hello World"
