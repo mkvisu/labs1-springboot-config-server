@@ -1,1 +1,20 @@
-
+server:
+  port: 8083
+spring:
+  application:
+    name: organization-service
+  config:
+    import: optional:configserver:http://localhost:8087
+  datasource:
+    url: jdbc:postgresql://localhost:5433/organization
+    username: organization
+    password: pwdtest
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+eureka:
+  client:
+    service-url: http://localhost:8761/eureka/
